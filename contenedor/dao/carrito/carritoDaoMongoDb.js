@@ -1,4 +1,6 @@
 const {ContenedorMongoDb} = require('../../ContenedorMongoDb.js');
+const {carro} = require('../../../config');
+
 
 class CarritosDaoMongoDb extends ContenedorMongoDb {
 
@@ -77,4 +79,5 @@ class CarritosDaoMongoDb extends ContenedorMongoDb {
   
 }
 
-module.exports.CarritosDaoMongoDb = CarritosDaoMongoDb;
+const CarritosMongo = new CarritosDaoMongoDb(carro);
+module.exports.Carritos = CarritosMongo;

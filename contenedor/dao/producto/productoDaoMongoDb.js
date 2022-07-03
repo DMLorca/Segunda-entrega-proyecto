@@ -1,4 +1,5 @@
 const {ContenedorMongoDb} = require('../../ContenedorMongoDb.js');
+const {producto} = require('../../../config');
 
 class ProductoDaoMongoDb extends ContenedorMongoDb {
 
@@ -100,4 +101,6 @@ class ProductoDaoMongoDb extends ContenedorMongoDb {
     
 }
 
-module.exports.ProductoDaoMongoDb = ProductoDaoMongoDb;
+const instProdMongo = new ProductoDaoMongoDb(producto);
+
+module.exports.Producto = instProdMongo;
